@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>יגל אינסטלציה | אינסטלטור ברחובות ונס ציונה</title>
+<meta name="description" content="יגל אינסטלציה, אינסטלטור ברחובות ונס ציונה. 5 כוכבים מ-37 ביקורות בגוגל.">
+<meta name="theme-color" content="#1d4ed8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --accent: #1d4ed8;
+  --accent-soft: #e8efff;
+  --ink: #111827; --soft: #4b5563; --faint: #6b7280; --line: #e5e7eb;
+  --bg: #ffffff; --bg2: #f8fafc; --card: #ffffff;
+  --radius: 18px; --shadow: 0 1px 2px rgba(17,24,39,.06), 0 8px 24px rgba(17,24,39,.06);
+  --wa: #1fa855;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: "Heebo", system-ui, -apple-system, "Segoe UI", Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; font-size: 17px; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+.wrap { max-width: 1040px; margin-inline: auto; padding-inline: 20px; }
+.ltr { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+
+/* top bar */
+.top { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.88); backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px); border-block-end: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; text-decoration: none; }
+.mark { width: 38px; height: 38px; border-radius: 12px; background: var(--accent); color: #fff; display: grid; place-items: center; flex: none; }
+.mark svg { width: 22px; height: 22px; }
+.top .call { font-weight: 700; text-decoration: none; color: var(--accent); white-space: nowrap; }
+
+/* hero */
+.hero { background: radial-gradient(1200px 400px at 85% -10%, var(--accent-soft), transparent 70%), var(--bg); padding-block: 56px 40px; }
+.badge { display: inline-flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: 15px; color: var(--soft); box-shadow: var(--shadow); }
+.stars { color: #f59e0b; letter-spacing: 1px; }
+h1 { font-size: clamp(30px, 5.2vw, 50px); line-height: 1.15; font-weight: 800; margin: 18px 0 12px; letter-spacing: -.01em; max-width: 18ch; }
+.sub { font-size: clamp(17px, 2.2vw, 20px); color: var(--soft); margin: 0 0 28px; max-width: 40ch; }
+.ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 0 26px; border-radius: 14px; font-weight: 700; font-size: 18px; text-decoration: none; transition: transform .2s cubic-bezier(.2,.8,.2,1), box-shadow .2s; }
+.btn svg { width: 22px; height: 22px; flex: none; }
+.btn:hover { transform: translateY(-2px); }
+.btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.btn.wa { background: var(--wa); color: #fff; box-shadow: 0 6px 18px rgba(31,168,85,.28); }
+.btn.tel { background: var(--card); color: var(--ink); border: 1.5px solid var(--line); }
+.facts { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 26px; color: var(--soft); font-size: 15px; }
+.facts span { display: inline-flex; align-items: center; gap: 6px; }
+.facts svg { width: 18px; height: 18px; color: var(--accent); }
+
+/* sections */
+section.block { padding-block: 48px; }
+section.alt { background: var(--bg2); border-block: 1px solid var(--line); }
+h2 { font-size: clamp(24px, 3.4vw, 32px); font-weight: 800; margin: 0 0 8px; }
+.lead { color: var(--soft); margin: 0 0 26px; }
+.grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
+.svc { display: flex; gap: 14px; align-items: flex-start; }
+.svc .ic { width: 42px; height: 42px; border-radius: 12px; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; flex: none; }
+.svc .ic svg { width: 22px; height: 22px; }
+.svc h3 { margin: 0 0 2px; font-size: 18px; }
+.svc p { margin: 0; color: var(--soft); font-size: 15px; }
+.rev p { margin: 10px 0 12px; font-size: 16px; }
+.rev .who { color: var(--faint); font-size: 14px; }
+.score { display: flex; align-items: baseline; gap: 10px; margin-bottom: 22px; }
+.score b { font-size: 40px; font-weight: 800; line-height: 1; }
+.hours { list-style: none; margin: 0; padding: 0; }
+.hours li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-block-end: 1px solid var(--line); }
+.hours li:last-child { border: 0; }
+.two { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.maplink { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; color: var(--accent); font-weight: 700; text-decoration: none; }
+
+/* final cta */
+.final { text-align: center; padding-block: 56px; }
+.final h2 { margin-bottom: 18px; }
+.final .ctas { justify-content: center; }
+
+footer { padding-block: 26px 110px; color: var(--faint); font-size: 14px; text-align: center; border-block-start: 1px solid var(--line); }
+
+/* floating whatsapp on phones */
+.fab { position: fixed; inset-inline: 16px; bottom: max(16px, env(safe-area-inset-bottom)); z-index: 20; display: none; }
+.fab .btn { width: 100%; }
+@media (max-width: 640px) {
+  .fab { display: block; }
+  .ctas .btn { flex: 1 1 100%; }
+  .top .call { display: none; }
+  .hero { padding-block: 36px 28px; }
+  section.block { padding-block: 36px; }
+}
+
+/* reveal on scroll */
+.rv { opacity: 0; transform: translateY(14px); transition: opacity .6s cubic-bezier(.2,.8,.2,1), transform .6s cubic-bezier(.2,.8,.2,1); }
+.rv.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } .btn { transition: none; } html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg></span><span>יגל אינסטלציה</span></a>
+    <a class="call" href="tel:+972509997217"><span class="ltr">050-999-7217</span></a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="badge"><span class="stars" aria-hidden="true">★★★★★</span><span>5 מתוך 5 · 37 ביקורות בגוגל</span></span>
+      <h1>יגל אינסטלציה: אינסטלטור ברחובות ובנס ציונה</h1>
+      <p class="sub">שירות מקצועי ואמין, ופנייה ישירה בוואטסאפ או בטלפון.</p>
+      <div class="ctas">
+        <a class="btn wa" href="https://wa.me/972509997217?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%99%D7%92%D7%9C%20%D7%90%D7%99%D7%A0%D7%A1%D7%98%D7%9C%D7%A6%D7%99%D7%94%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8.%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>לתיאום הגעה בוואטסאפ</span></a>
+        <a class="btn tel" href="tel:+972509997217"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>התקשרו <span class="ltr">050-999-7217</span></span></a>
+      </div>
+      <div class="facts"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>רחובות ונס ציונה</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>פנייה ישירה בוואטסאפ</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>37 לקוחות ממליצים</span></div>
+    </div>
+  </section>
+
+  <section class="block" id="services">
+    <div class="wrap">
+      <h2 class="rv">מה אנחנו עושים</h2>
+      <p class="lead rv">עבודה מקצועית, עם אחריות ובלי הפתעות במחיר.</p>
+      <div class="grid"><div class="card svc rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><h3>טיפול בהצפות ונזילות</h3><p>מגיעים מהר, גם בשעות הערב.</p></div></div><div class="card svc rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><h3>החלפת צנרת בכל הדירה</h3><p>עבודה נקייה, לפי התקן ובזמן.</p></div></div><div class="card svc rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><h3>תיקונים בבית</h3><p>כל מה שקשור לאינסטלציה בבית.</p></div></div></div>
+    </div>
+  </section>
+
+  <section class="block alt" id="reviews">
+    <div class="wrap">
+      <h2 class="rv">מה הלקוחות אומרים</h2>
+      <div class="score rv"><b>5</b><span class="stars" aria-hidden="true">★★★★★</span><span>37 ביקורות בגוגל</span></div>
+      <div class="grid"><figure class="card rev rv" style="margin:0"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>"יגל אינסטלציה! איכות, אמינות, שירות יגל הגיע אליי הביתה אחרי פנייה שלי בסביבות השעה 22:00 אחרי שכל ביתי הוצף! תוך זמן קצר יגל עלה על הבעיה ופתר אותה במינימום זמן מקסימום איכות ומחיר מעולה! ממליץ עליו בחום!!"</p><figcaption class="who">לקוח מגוגל</figcaption></figure><figure class="card rev rv" style="margin:0"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>"אני רוצה להמליץ על יגל אינסטלציה שביצע לי החלפת אינסטלציה בכל הדירה עבודה נקייה וברמת גימור גבוהה מאוד, עמידה בתקן ובזמנים, מחיר מצויין ביחס להצעות אחרות שקיבלתי, מעבר ליחס אנושי מדהים שזה ללא ספק מעל הכל הוא..."</p><figcaption class="who">לקוח מגוגל</figcaption></figure><figure class="card rev rv" style="margin:0"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>"ממליצה בחום! זמין בצורה מהירה ולא רגילה בחור מדהיםעושה את העבודה בצורה נקייה ומסודרת מחיר שמתאים לכל כיס. בטוחה שאם אצטרך אינסלטור אקרא רק לו!!"</p><figcaption class="who">לקוח מגוגל</figcaption></figure></div>
+    </div>
+  </section>
+
+  <section class="block" id="info">
+    <div class="wrap two">
+      <div class="card rv">
+        <h2>שעות פעילות</h2>
+        <ul class="hours"><li><span>ראשון עד חמישי</span><span>06:00–22:00</span></li><li><span>שישי</span><span>06:00–14:00</span></li><li><span>שבת</span><span>19:00–22:00</span></li></ul>
+      </div>
+      <div class="card rv">
+        <h2>איפה אנחנו</h2>
+        <p class="lead">משה חרש 6, דירה 8, רחובות</p>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=%D7%90%D7%99%D7%A0%D7%A1%D7%98%D7%9C%D7%98%D7%95%D7%A8%20%D7%91%D7%A0%D7%A1%20%D7%A6%D7%99%D7%95%D7%A0%D7%94%20-%20%D7%99%D7%92%D7%9C%20%D7%90%D7%99%D7%A0%D7%A1%D7%98%D7%9C%D7%A6%D7%99%D7%94&amp;query_place_id=ChIJc6M_DrO3AhURSko5wKxZeCY" target="_blank" rel="noopener">פתיחה בגוגל מפות ←</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="final alt">
+    <div class="wrap">
+      <h2 class="rv">צריכים אינסטלטור? כתבו לנו עכשיו</h2>
+      <div class="ctas rv">
+        <a class="btn wa" href="https://wa.me/972509997217?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%99%D7%92%D7%9C%20%D7%90%D7%99%D7%A0%D7%A1%D7%98%D7%9C%D7%A6%D7%99%D7%94%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8.%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>לתיאום הגעה בוואטסאפ</span></a>
+        <a class="btn tel" href="tel:+972509997217"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>התקשרו</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 יגל אינסטלציה · דף לדוגמה שהוכן עבור יגל אינסטלציה</div>
+</footer>
+
+<div class="fab"><a class="btn wa" href="https://wa.me/972509997217?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%99%D7%92%D7%9C%20%D7%90%D7%99%D7%A0%D7%A1%D7%98%D7%9C%D7%A6%D7%99%D7%94%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8.%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>לתיאום הגעה בוואטסאפ</span></a></div>
+
+<script>
+(function () {
+  var els = document.querySelectorAll(".rv");
+  if (!("IntersectionObserver" in window)) { els.forEach(function (e) { e.classList.add("in"); }); return; }
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { rootMargin: "0px 0px -8% 0px" });
+  els.forEach(function (e) { io.observe(e); });
+})();
+</script>
+</body>
+</html>
