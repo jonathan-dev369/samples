@@ -173,6 +173,29 @@ h2 { font-size: clamp(28px, 3.8vw, 40px); font-weight: 900; margin: 0 0 10px; li
 .dots button { width: 9px; height: 9px; border-radius: 999px; border: 0; padding: 0; background: var(--line); cursor: pointer; transition: width .3s var(--ease), background .3s; }
 .dots button[aria-current=true] { width: 26px; background: var(--accent); }
 
+/* all reviews: button, dialog, filters (added 2026-11-28) */
+.rv-all { display: flex; justify-content: center; margin-top: 18px; }
+.btn-ghost { font: inherit; font-weight: 800; font-size: 16px; color: var(--accent-text); background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); border-radius: 999px; padding: 12px 22px; cursor: pointer; transition: transform .2s var(--ease), box-shadow .2s; }
+.btn-ghost:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
+.rv-dialog { width: min(720px, 94vw); max-height: 88vh; padding: 0; border: 1px solid var(--line); border-radius: var(--r); background: var(--bg); color: var(--ink); box-shadow: var(--shadow-lg); }
+.rv-dialog::backdrop { background: rgba(2,6,23,.55); backdrop-filter: blur(3px); }
+.rv-dialog[open] { display: flex; flex-direction: column; animation: rvpop .28s var(--ease); }
+@keyframes rvpop { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
+.rv-dhead { position: sticky; top: 0; background: var(--bg); padding: 18px 20px 12px; border-bottom: 1px solid var(--line); display: grid; gap: 12px; }
+.rv-dtitle { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.rv-dtitle h3 { margin: 0; font-size: 20px; font-weight: 900; }
+.rv-x { font: inherit; font-size: 22px; line-height: 1; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; }
+.rv-filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.chip { font: inherit; font-size: 14px; font-weight: 700; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--soft); cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.rv-sep { width: 1px; height: 22px; background: var(--line); margin-inline: 4px; }
+.rv-list { overflow-y: auto; padding: 16px 20px 22px; display: grid; gap: 12px; }
+.rv-item { background: var(--card); border: 1px solid var(--line); border-radius: var(--rs); padding: 16px 18px; }
+.rv-item .top { display: flex; justify-content: space-between; gap: 10px; font-size: 14px; color: var(--faint); margin-bottom: 6px; }
+.rv-item p { margin: 0; font-size: 16px; }
+.rv-empty { color: var(--faint); text-align: center; padding: 24px 0; }
+.rev .who .when { margin-inline-start: auto; }
+
 /* faq */
 .faq { max-width: 780px; margin-inline: auto; display: grid; gap: 12px; }
 .faq details { background: var(--card); border: 1px solid var(--line); border-radius: var(--rs); box-shadow: var(--shadow); overflow: hidden; }
@@ -270,7 +293,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
       </div>
       <div class="hcard rv-in" aria-label="מה הלקוחות אומרים">
         <div class="big"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg></span><div class="score">5<small><span class="stars" aria-hidden="true">★★★★★</span> 39 ביקורות בגוגל</small></div></div>
-        <blockquote>חשמלאי מוסמך עם שירות יוצא מן הכלל! אמין ישר ומקצועי. מדבר אל הלקוח בגובה העיניים ומסביר את אופן הטיפול בצורה יסודית. ממליץ בחום!<cite>לקוח מגוגל</cite></blockquote>
+        <blockquote>חשמלאי מוסמך עם שירות יוצא מן הכלל ! אמין ישר ומקצועי. מדבר אל הלקוח בגובה העיניים ומסביר את אופן הטיפול בצורה יסודית. ממליץ בחום !<cite>לקוח מגוגל</cite></blockquote>
         <div class="float"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>תיאום בהודעה אחת</span></div>
       </div>
     </div>
@@ -300,9 +323,23 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
         <div><span class="eyebrow rv-in">ביקורות</span><h2 class="rv-in">מה הלקוחות אומרים</h2></div>
         <div class="rv-score rv-in"><b>5</b><div><span class="stars" aria-hidden="true">★★★★★</span><small>39 ביקורות בגוגל</small></div></div>
       </div>
-      <div class="track" id="track" tabindex="0" aria-label="ביקורות, אפשר לגלול לצדדים"><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>חשמלאי מוסמך עם שירות יוצא מן הכלל! אמין ישר ומקצועי. מדבר אל הלקוח בגובה העיניים ומסביר את אופן הטיפול בצורה יסודית. ממליץ בחום!</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל</figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>הייתה תקלה בלוח הבקרה במפעל, חלק מהמכונות הפסיקו לעבוד והאורות באולם התחילו להבהב. התקשרתי למתן והוא הגיע ממש מהר, בדק הכול בצורה יסודית ומצא שהבעיה הייתה בממסר תקול.</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל</figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>נתן היקר הגיע אליי ביום גשום ופתר את התקלה שהיה בדוד חשמל בצורה מקצועית ממש מרוצה</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל</figcaption></figure></div>
+      <div class="track" id="track" tabindex="0" aria-label="ביקורות, אפשר לגלול לצדדים"><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>חשמלאי מוסמך עם שירות יוצא מן הכלל ! אמין ישר ומקצועי. מדבר אל הלקוח בגובה העיניים ומסביר את אופן הטיפול בצורה יסודית. ממליץ בחום !</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">נובמבר 2026</span></figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>בחור מקצוען עד שלא מצא את הבעייה לא עזב את זה באמת שירות טדיבות א.א</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">יולי 2026</span></figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>תותח על...מקצועי, יעיל, פותר תקלות הכי טוב שיש.</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">נובמבר 2026</span></figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>הייתה תקלה בלוח הבקרה במפעל – חלק מהמכונות הפסיקו לעבוד והאורות באולם התחילו להבהב. התקשרתי למתן והוא הגיע ממש מהר, בדק הכול בצורה יסודית ומצא שהבעיה הייתה בממסר תקול. הוא החליף את החלק במקום, ווידא שהכול עובד כמו שצריך לפני שהלך. שירות מקצועי, מהיר ואמין. באמת רואים שהוא מבין עניין וחשוב לו שהלקוח יהיה רגוע. ממליץ בהחלט.</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">אוקטובר 2025</span></figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>נתן היקר הגיע אליי ביום גשום ופתר את התקלה שהיה בדוד חשמל בצורה מקצועית  ממש מרוצה</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">דצמבר 2025</span></figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>נתן הגיע אחרי אולי 3 חשמלאים שלא מצאו את הבעיה התעקש שהבעיה היא בחברת חשמל ופשוט לא עזב אותם עד שהם הגיע והוא הוכיח להם שהבעיה לא אצלי וברוך השם אני אחרי זה אחרי כמעט חצי שנה של בעיות חשמל קשות בבית מספר אחד !!!</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">אוקטובר 2025</span></figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>.מתן פשוט מדהים, מקצוען זמין כמעט תמיד ובכל שעה. הגיע אליי הבייתה לתיקון ארון חשמל במוצאי שבת לקראת 23:00 , הגיע בזמן , תיקן את הבעיה והסביר את העלות ( שהייתה בהחלט סבירה). שירות מצוין, אדיבות בעיקר יושרה!! בהחלט אשתמש בשירותיו בעתיד.</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">ספטמבר 2025</span></figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>כמ תמיד, מתן היקר נותן מעמקי הלב :) אין כמוך בעולם הזה אין, תודה על כל הנתינה מכל הלב, מעריך עד השמיים</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">אוקטובר 2025</span></figcaption></figure></div>
       <div class="dots" id="dots" aria-hidden="true"></div>
+      <div class="rv-all" ><button type="button" class="btn-ghost" id="rvOpen">לכל 20 הביקורות</button></div>
     </div>
+    <dialog class="rv-dialog" id="rvDialog" aria-labelledby="rvTitle">
+      <div class="rv-dhead">
+        <div class="rv-dtitle"><h3 id="rvTitle">כל הביקורות מגוגל</h3><button type="button" class="rv-x" id="rvClose" aria-label="סגירה">×</button></div>
+        <div class="rv-filters" role="group" aria-label="סינון ומיון">
+          <span id="rvStars" style="display:contents"><button type="button" class="chip" data-stars="all" aria-pressed="true">הכל</button></span>
+          <span class="rv-sep" aria-hidden="true"></span>
+          <button type="button" class="chip" data-sort="new" aria-pressed="true">החדשות קודם</button>
+          <button type="button" class="chip" data-sort="old" aria-pressed="false">הישנות קודם</button>
+        </div>
+      </div>
+      <div class="rv-list" id="rvList" aria-live="polite"></div>
+    </dialog>
+    <script type="application/json" id="rvData">[{"stars": 5, "text": "חשמלאי מוסמך עם שירות יוצא מן הכלל ! אמין ישר ומקצועי. מדבר אל הלקוח בגובה העיניים ומסביר את אופן הטיפול בצורה יסודית. ממליץ בחום !", "date": "2026-11-04"}, {"stars": 5, "text": "בחור מקצוען עד שלא מצא את הבעייה לא עזב את זה באמת שירות טדיבות א.א", "date": "2026-07-08"}, {"stars": 5, "text": "תותח על...מקצועי, יעיל, פותר תקלות הכי טוב שיש.", "date": "2026-11-03"}, {"stars": 5, "text": "הייתה תקלה בלוח הבקרה במפעל – חלק מהמכונות הפסיקו לעבוד והאורות באולם התחילו להבהב. התקשרתי למתן והוא הגיע ממש מהר, בדק הכול בצורה יסודית ומצא שהבעיה הייתה בממסר תקול. הוא החליף את החלק במקום, ווידא שהכול עובד כמו שצריך לפני שהלך. שירות מקצועי, מהיר ואמין. באמת רואים שהוא מבין עניין וחשוב לו שהלקוח יהיה רגוע. ממליץ בהחלט.", "date": "2025-10-20"}, {"stars": 5, "text": "נתן היקר הגיע אליי ביום גשום ופתר את התקלה שהיה בדוד חשמל בצורה מקצועית  ממש מרוצה", "date": "2025-12-20"}, {"stars": 5, "text": "נתן הגיע אחרי אולי 3 חשמלאים שלא מצאו את הבעיה התעקש שהבעיה היא בחברת חשמל ופשוט לא עזב אותם עד שהם הגיע והוא הוכיח להם שהבעיה לא אצלי וברוך השם אני אחרי זה אחרי כמעט חצי שנה של בעיות חשמל קשות בבית מספר אחד !!!", "date": "2025-10-23"}, {"stars": 5, "text": ".מתן פשוט מדהים, מקצוען זמין כמעט תמיד ובכל שעה. הגיע אליי הבייתה לתיקון ארון חשמל במוצאי שבת לקראת 23:00 , הגיע בזמן , תיקן את הבעיה והסביר את העלות ( שהייתה בהחלט סבירה). שירות מצוין, אדיבות בעיקר יושרה!! בהחלט אשתמש בשירותיו בעתיד.", "date": "2025-09-15"}, {"stars": 5, "text": "כמ תמיד, מתן היקר נותן מעמקי הלב :) אין כמוך בעולם הזה אין, תודה על כל הנתינה מכל הלב, מעריך עד השמיים", "date": "2025-10-19"}, {"stars": 5, "text": "מרוצה מאוד הגיע מהר והיה מאוד מקצועי ממליץ בחום לכולם.", "date": "2026-05-10"}, {"stars": 5, "text": "נתן היקר נותן שירות מעל המצופה אין בעל מקצוע כזה פתר ממש בשניות את התקוה במערכת קירור", "date": "2025-11-08"}, {"stars": 5, "text": "אין דברים כאלה הגיע אלינו לטיפול לאחר יום עבודה מפרך וכאילו זו היתה הקריאה הראשונה לאותו יום. אדיב מקצועי ובעיקר אנושי. ממליץ בחום רב", "date": "2025-09-19"}, {"stars": 5, "text": "מתן היה אצלי בתיקון מזגן בדק את המזגן ומיד עלה על התקלה ופתר אותה שירות מקצועי ואמין כבר חשבתי שאצתרך להחליף מזגן בזכות מתן אני יכול להמשיך אם המזגן שלי תודה מתן ארתור🙏", "date": "2025-10-01"}, {"stars": 5, "text": "הייתי במצוקה התקלקל לי חדר קירור ונתי בא בערב ותיקן לי אותו בזמן קצרלשביעות רצוני וגבה מחיר הוגן כל הכבוד מקצוען.", "date": "2025-10-03"}, {"stars": 5, "text": "נתן הציל אותי בערב שבת עם נתיך שנשרף ממש הצלה אלוף שירות יוצא דופן תותח על", "date": "2025-11-08"}, {"stars": 5, "text": "אלוף העבודת חשמל למכונה כרוסלה", "date": "2026-07-12"}, {"stars": 5, "text": "שירות יוצא מן הכלל הצילו לי סחורה ב30,000 במקרר שתיקנו תודה לנתן האלוף מספר אחד", "date": "2025-09-15"}, {"stars": 5, "text": "נתן והצוות שלו עשו עבודה נפלאה והתקינו לנו מערכת VRF למשרדים בנוסף הם בנו ארון פיקוד למערכת נוספת שברשותנו  כמובן שאמליץ עליהם", "date": "2025-09-15"}, {"stars": 5, "text": "חברה מקצועית ביותר , אמינה וזמינה . מחירים הוגנים . ממליץ בחום רב לשירותי החברה .", "date": "2025-10-06"}, {"stars": 5, "text": "בחור מקצועי אמין מחירים נוחים עם שירות לקוחות יוצא מן הכלל ממליץ בחום", "date": "2025-09-19"}, {"stars": 5, "text": "היי טכנאי ממקצועי וישר אמין ומסור תיקן לנו מקרר תעשייתי", "date": "2025-09-15"}]</script>
   </section>
 
   <section class="block alt" id="faq">
@@ -367,6 +404,52 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
   if (fab && heroCta && "IntersectionObserver" in window) {
     new IntersectionObserver(function (es) { fab.classList.toggle("show", !es[0].isIntersecting); }).observe(heroCta);
   } else if (fab) { fab.classList.add("show"); }
+
+  /* all reviews: dialog with star filter and date sort */
+  (function () {
+    var dlg = document.getElementById("rvDialog"), list = document.getElementById("rvList"), open = document.getElementById("rvOpen");
+    var data = []; try { data = JSON.parse(document.getElementById("rvData").textContent) || []; } catch (e) {}
+    if (!dlg || !open || !data.length) return;
+    var stars = "all", sort = "new";
+    var MONTHS = ["ינואר","פברואר","מרץ","אפריל","מאי","יוני","יולי","אוגוסט","ספטמבר","אוקטובר","נובמבר","דצמבר"];
+    function when(d) { if (!d) return ""; var p = d.split("-"); return MONTHS[+p[1] - 1] + " " + p[0]; }
+    function render() {
+      var rows = data.filter(function (r) { return stars === "all" || String(r.stars) === stars; });
+      rows.sort(function (a, b) { var x = a.date || "", y = b.date || ""; return sort === "new" ? (x < y ? 1 : x > y ? -1 : 0) : (x > y ? 1 : x < y ? -1 : 0); });
+      list.innerHTML = "";
+      if (!rows.length) { var e = document.createElement("p"); e.className = "rv-empty"; e.textContent = "אין ביקורות בסינון הזה"; list.appendChild(e); return; }
+      rows.forEach(function (r) {
+        var it = document.createElement("article"); it.className = "rv-item";
+        var top = document.createElement("div"); top.className = "top";
+        var st = document.createElement("span"); st.className = "stars"; st.setAttribute("aria-label", r.stars + " כוכבים"); st.textContent = "★".repeat(r.stars);
+        var dt = document.createElement("span"); dt.textContent = when(r.date);
+        top.appendChild(st); top.appendChild(dt);
+        var p = document.createElement("p"); p.textContent = r.text;
+        it.appendChild(top); it.appendChild(p); list.appendChild(it);
+      });
+    }
+    /* one chip per rating that exists (5 down to 1), with how many reviews it has */
+    var holder = document.getElementById("rvStars");
+    [5, 4, 3, 2, 1].forEach(function (n) {
+      var count = data.filter(function (r) { return r.stars === n; }).length;
+      if (!count) return;
+      var c = document.createElement("button"); c.type = "button"; c.className = "chip";
+      c.setAttribute("data-stars", String(n)); c.setAttribute("aria-pressed", "false");
+      c.textContent = n + "★ (" + count + ")";
+      holder.appendChild(c);
+    });
+    dlg.querySelectorAll(".chip").forEach(function (c) {
+      c.addEventListener("click", function () {
+        var key = c.hasAttribute("data-stars") ? "data-stars" : "data-sort";
+        dlg.querySelectorAll("[" + key + "]").forEach(function (o) { o.setAttribute("aria-pressed", o === c ? "true" : "false"); });
+        if (key === "data-stars") stars = c.getAttribute(key); else sort = c.getAttribute(key);
+        render(); list.scrollTop = 0;
+      });
+    });
+    open.addEventListener("click", function () { render(); if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", ""); });
+    document.getElementById("rvClose").addEventListener("click", function () { if (dlg.close) dlg.close(); else dlg.removeAttribute("open"); });
+    dlg.addEventListener("click", function (e) { if (e.target === dlg && dlg.close) dlg.close(); });
+  })();
 
   /* reviews carousel: dots, gentle auto-advance that stops on touch */
   var track = document.getElementById("track"), dots = document.getElementById("dots");

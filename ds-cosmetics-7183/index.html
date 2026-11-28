@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <title>ds cosmetics | קליניקה לטיפוח העור בנתניה</title>
-<meta name="description" content="ds cosmetics, קליניקה לטיפוח העור בנתניה. 5 כוכבים מ-117 ביקורות בגוגל.">
+<meta name="description" content="ds cosmetics, קליניקה לטיפוח העור בנתניה. 5 כוכבים מ-121 ביקורות בגוגל.">
 <meta name="theme-color" content="#a8455f">
 <script>try { var t = localStorage.getItem("sample-theme"); if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t); } catch (e) {}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -173,6 +173,29 @@ h2 { font-size: clamp(28px, 3.8vw, 40px); font-weight: 900; margin: 0 0 10px; li
 .dots button { width: 9px; height: 9px; border-radius: 999px; border: 0; padding: 0; background: var(--line); cursor: pointer; transition: width .3s var(--ease), background .3s; }
 .dots button[aria-current=true] { width: 26px; background: var(--accent); }
 
+/* all reviews: button, dialog, filters (added 2026-11-28) */
+.rv-all { display: flex; justify-content: center; margin-top: 18px; }
+.btn-ghost { font: inherit; font-weight: 800; font-size: 16px; color: var(--accent-text); background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); border-radius: 999px; padding: 12px 22px; cursor: pointer; transition: transform .2s var(--ease), box-shadow .2s; }
+.btn-ghost:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
+.rv-dialog { width: min(720px, 94vw); max-height: 88vh; padding: 0; border: 1px solid var(--line); border-radius: var(--r); background: var(--bg); color: var(--ink); box-shadow: var(--shadow-lg); }
+.rv-dialog::backdrop { background: rgba(2,6,23,.55); backdrop-filter: blur(3px); }
+.rv-dialog[open] { display: flex; flex-direction: column; animation: rvpop .28s var(--ease); }
+@keyframes rvpop { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
+.rv-dhead { position: sticky; top: 0; background: var(--bg); padding: 18px 20px 12px; border-bottom: 1px solid var(--line); display: grid; gap: 12px; }
+.rv-dtitle { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.rv-dtitle h3 { margin: 0; font-size: 20px; font-weight: 900; }
+.rv-x { font: inherit; font-size: 22px; line-height: 1; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; }
+.rv-filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.chip { font: inherit; font-size: 14px; font-weight: 700; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--soft); cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.rv-sep { width: 1px; height: 22px; background: var(--line); margin-inline: 4px; }
+.rv-list { overflow-y: auto; padding: 16px 20px 22px; display: grid; gap: 12px; }
+.rv-item { background: var(--card); border: 1px solid var(--line); border-radius: var(--rs); padding: 16px 18px; }
+.rv-item .top { display: flex; justify-content: space-between; gap: 10px; font-size: 14px; color: var(--faint); margin-bottom: 6px; }
+.rv-item p { margin: 0; font-size: 16px; }
+.rv-empty { color: var(--faint); text-align: center; padding: 24px 0; }
+.rev .who .when { margin-inline-start: auto; }
+
 /* faq */
 .faq { max-width: 780px; margin-inline: auto; display: grid; gap: 12px; }
 .faq details { background: var(--card); border: 1px solid var(--line); border-radius: var(--rs); box-shadow: var(--shadow); overflow: hidden; }
@@ -260,7 +283,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <span class="pill rv-in"><span class="stars" aria-hidden="true">★★★★★</span><span><b>5</b> מתוך 5 · 117 ביקורות בגוגל</span></span>
+        <span class="pill rv-in"><span class="stars" aria-hidden="true">★★★★★</span><span><b>5</b> מתוך 5 · 121 ביקורות בגוגל</span></span>
         <h1 class="rv-in">ds cosmetics:<span class="hl"> טיפוח העור וספא ראש בנתניה</span></h1>
         <p class="sub rv-in">יחס אישי, מקצועיות ותיאום תור בהודעה אחת.</p>
         <div class="ctas rv-in">
@@ -269,14 +292,14 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
         </div>
       </div>
       <div class="hcard rv-in" aria-label="מה הלקוחות אומרים">
-        <div class="big"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/></svg></span><div class="score">5<small><span class="stars" aria-hidden="true">★★★★★</span> 117 ביקורות בגוגל</small></div></div>
-        <blockquote>דיאנה נעימה ומקצועית. פינקה אותי מאד בטיפול ראש. יצאתי ממש פרשית, ממליצה בחום אני כבר קבעתי את הטיפול הבא... מה איתכם?<cite>לקוח מגוגל</cite></blockquote>
+        <div class="big"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/></svg></span><div class="score">5<small><span class="stars" aria-hidden="true">★★★★★</span> 121 ביקורות בגוגל</small></div></div>
+        <blockquote>דיאנה מהממת, מקצועית, עדינה, ומדוייקת. נתנה לי תחושת ביטחון והבינה איזה טיפול אני צריכה רק מהסתכלות זריזה. ממליצה בחום!<cite>לקוח מגוגל</cite></blockquote>
         <div class="float"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>תיאום בהודעה אחת</span></div>
       </div>
     </div>
   </section>
 
-  <div class="stats"><div class="wrap"><div class="row rv-in"><div class="stat"><b>5★</b><span>דירוג בגוגל</span></div><div class="stat"><b>117</b><span>ביקורות</span></div><div class="stat"><b>20:00</b><span>פתוחים עד</span></div><div class="stat"><b>נתניה</b><span>מיקום</span></div></div></div></div>
+  <div class="stats"><div class="wrap"><div class="row rv-in"><div class="stat"><b>5★</b><span>דירוג בגוגל</span></div><div class="stat"><b>121</b><span>ביקורות</span></div><div class="stat"><b>20:00</b><span>פתוחים עד</span></div><div class="stat"><b>נתניה</b><span>מיקום</span></div></div></div></div>
 
   <section class="block" id="services">
     <div class="wrap">
@@ -298,11 +321,25 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
     <div class="wrap">
       <div class="rv-head">
         <div><span class="eyebrow rv-in">ביקורות</span><h2 class="rv-in">מה הלקוחות אומרים</h2></div>
-        <div class="rv-score rv-in"><b>5</b><div><span class="stars" aria-hidden="true">★★★★★</span><small>117 ביקורות בגוגל</small></div></div>
+        <div class="rv-score rv-in"><b>5</b><div><span class="stars" aria-hidden="true">★★★★★</span><small>121 ביקורות בגוגל</small></div></div>
       </div>
-      <div class="track" id="track" tabindex="0" aria-label="ביקורות, אפשר לגלול לצדדים"><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>הגעתי לטיפול ספא ראש ונהנתי מאוד! קיבלתי טיפול מקצועי ומפנק, העיסוי היה מהנה, האווירה והטיפול המיוחד העניקו לי רוגע ושלווה ויצאתי מהטיפול מלאת אנרגיה! ממליצה בחום להגיע ולהתפנק!</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל</figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>לדיאנה יש ממש ידי זהב, הרגשתי את כל הרוגע זורם בכל נגיעה. העיסוי היה מושלם ומדויק, היא הצליחה לשחרר אותי ולהרגיע גם את הראש וגם את הנשמה. באמת חוויה מפנקת ומהלב. ממליצה בחום</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל</figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>דיאנה נעימה ומקצועית. פינקה אותי מאד בטיפול ראש. יצאתי ממש פרשית, ממליצה בחום אני כבר קבעתי את הטיפול הבא... מה איתכם?</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל</figcaption></figure></div>
+      <div class="track" id="track" tabindex="0" aria-label="ביקורות, אפשר לגלול לצדדים"><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>וואו! איזו חוויה ! אחרי יום עבודה מאומץ ובאמצע כאוס של החיים זה בדיוק מה שהייתי צריכה! דיאנה מקצועית ואדיבה, רגישה ואכפתית. הטיפול הוסיף לי זןהר לפנים ובעיקר לנשמה.. המלצה שלי: אל תוותרו על טיפול 90 דקות. שווה כל שקל ובאמת מחיר הוגן. תודה לך, דיאנה יקירה! ברור לי שאגיע שוב!</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">נובמבר 2026</span></figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>הילדים שלי הפתיעו עם מתנת יום הולדת , עיסוי ראש. האמת שלא בדקתי במי מדובר, סמכתי עליהם, ואכן היה בוקר מדהים ומפנק... זה התחיל עם עיסוי ראש, מים חמימים זורמים, אבנים חמות, עיסוי כתפים וידיים.. ככה בדיוק צריך להתחיל את היום. תודה רבה ❤️❤️</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">פברואר 2026</span></figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>דיאנה נעימה ומקצועית.פינקה אותי מאד בטיפול ראש.יצאתי ממש פרשית,ממליצה בחום אני כבר קבעתי את הטיפול הבא...מה איתכם?</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">פברואר 2026</span></figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>הגעתי לטיפול ספא ראש ונהנתי מאוד ! קיבלתי טיפול מקצועי ומפנק , העיסוי היה מהנה , האווירה והטיפול המיוחד העניקו לי רוגע ושלווה ויצאתי מהטיפול מלאת אנרגיה ! ממליצה בחום להגיע ולהתפנק !</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">נובמבר 2025</span></figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>הייתי אצל דיאנה והיה לי מושלם הרגשה של שעה בגן עדן ! היא גם נעימה וקשובה שזה הוסיף לאווירה לגמרי אמליץ מכל ליבי ❤️</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">יולי 2025</span></figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>ואוווווו!! טיפול חלומי סגרתי לעצמי מתנה ליומולדת עיסוי ראש וקיבלתי פינוק מפנקקקף, עיסוי ידיים, שכמות, טיפול פנים. ודיאנה מהממת ועשתה הכל שאצא בחלום. ממליצה מאד!!</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">אוגוסט 2025</span></figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>וואו היה לי מדהים. טיפול פנים פלוס טיפול קרקפת ממש פינוק. דיאנה מהממת ומקצועית ומצליחה לשמור על רמה גבוה על אף אינסוף המילואים שעושה כבר שנתיים. אלופה ממש</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">נובמבר 2025</span></figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>דיאנה מהממת, מקצועית, עדינה, ומדוייקת. נתנה לי תחושת ביטחון והבינה איזה טיפול אני צריכה רק מהסתכלות זריזה. ממליצה בחום!</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">יולי 2025</span></figcaption></figure></div>
       <div class="dots" id="dots" aria-hidden="true"></div>
+      <div class="rv-all" ><button type="button" class="btn-ghost" id="rvOpen">לכל 20 הביקורות</button></div>
     </div>
+    <dialog class="rv-dialog" id="rvDialog" aria-labelledby="rvTitle">
+      <div class="rv-dhead">
+        <div class="rv-dtitle"><h3 id="rvTitle">כל הביקורות מגוגל</h3><button type="button" class="rv-x" id="rvClose" aria-label="סגירה">×</button></div>
+        <div class="rv-filters" role="group" aria-label="סינון ומיון">
+          <span id="rvStars" style="display:contents"><button type="button" class="chip" data-stars="all" aria-pressed="true">הכל</button></span>
+          <span class="rv-sep" aria-hidden="true"></span>
+          <button type="button" class="chip" data-sort="new" aria-pressed="true">החדשות קודם</button>
+          <button type="button" class="chip" data-sort="old" aria-pressed="false">הישנות קודם</button>
+        </div>
+      </div>
+      <div class="rv-list" id="rvList" aria-live="polite"></div>
+    </dialog>
+    <script type="application/json" id="rvData">[{"stars": 5, "text": "וואו! איזו חוויה ! אחרי יום עבודה מאומץ ובאמצע כאוס של החיים זה בדיוק מה שהייתי צריכה! דיאנה מקצועית ואדיבה, רגישה ואכפתית. הטיפול הוסיף לי זןהר לפנים ובעיקר לנשמה.. המלצה שלי: אל תוותרו על טיפול 90 דקות. שווה כל שקל ובאמת מחיר הוגן. תודה לך, דיאנה יקירה! ברור לי שאגיע שוב!", "date": "2026-11-16"}, {"stars": 5, "text": "הילדים שלי הפתיעו עם מתנת יום הולדת , עיסוי ראש. האמת שלא בדקתי במי מדובר, סמכתי עליהם, ואכן היה בוקר מדהים ומפנק... זה התחיל עם עיסוי ראש, מים חמימים זורמים, אבנים חמות, עיסוי כתפים וידיים.. ככה בדיוק צריך להתחיל את היום. תודה רבה ❤️❤️", "date": "2026-02-10"}, {"stars": 5, "text": "דיאנה נעימה ומקצועית.פינקה אותי מאד בטיפול ראש.יצאתי ממש פרשית,ממליצה בחום אני כבר קבעתי את הטיפול הבא...מה איתכם?", "date": "2026-02-10"}, {"stars": 5, "text": "הגעתי לטיפול ספא ראש ונהנתי מאוד ! קיבלתי טיפול מקצועי ומפנק , העיסוי היה מהנה , האווירה והטיפול המיוחד העניקו לי רוגע ושלווה ויצאתי מהטיפול מלאת אנרגיה ! ממליצה בחום להגיע ולהתפנק !", "date": "2025-11-29"}, {"stars": 5, "text": "הייתי אצל דיאנה והיה לי מושלם הרגשה של שעה בגן עדן ! היא גם נעימה וקשובה שזה הוסיף לאווירה לגמרי אמליץ מכל ליבי ❤️", "date": "2025-07-08"}, {"stars": 5, "text": "ואוווווו!! טיפול חלומי סגרתי לעצמי מתנה ליומולדת עיסוי ראש וקיבלתי פינוק מפנקקקף, עיסוי ידיים, שכמות, טיפול פנים. ודיאנה מהממת ועשתה הכל שאצא בחלום. ממליצה מאד!!", "date": "2025-08-24"}, {"stars": 5, "text": "וואו היה לי מדהים. טיפול פנים פלוס טיפול קרקפת ממש פינוק. דיאנה מהממת ומקצועית ומצליחה לשמור על רמה גבוה על אף אינסוף המילואים שעושה כבר שנתיים. אלופה ממש", "date": "2025-11-18"}, {"stars": 5, "text": "דיאנה מהממת, מקצועית, עדינה, ומדוייקת. נתנה לי תחושת ביטחון והבינה איזה טיפול אני צריכה רק מהסתכלות זריזה. ממליצה בחום!", "date": "2025-07-29"}, {"stars": 5, "text": "חוויה מרגיעה ומפנקת במיוחד! הטיפול היה מקצועי, עם מגע נעים ומדויק ויחס אישי מהמם. ממליצה בחום לכל מי שזקוקה לרגע של שקט ופינוק לעצמה 🙏💆‍♀️", "date": "2025-07-09"}, {"stars": 5, "text": "קבעתי אצל דיאנה טיפול פנים לאחותי ליום ההולדת, למרות שלא היה תור היה לה חשוב לנסות לפנות מקום ולבסוף הצלחנו! דיאנה הייתה אדיבה, קשובה והכי חשוב מקצועית ! חוויה של פעם בחיים !", "date": "2025-05-20"}, {"stars": 5, "text": "דיאנה פשוט מקסימה, מאוד גמישה ונעימה לשיחה סגרתי איתה טיפול לאחותי שבהריון והיא הייתה הכי מדהימה שיש ואחותי נהנתה מאוד! ממליצה בחום!", "date": "2025-09-14"}, {"stars": 5, "text": "לדיאנה יש ממש ידי זהב – הרגשתי את כל הרוגע זורם בכל נגיעה. העיסוי היה מושלם ומדויק, היא הצליחה לשחרר אותי ולהרגיע גם את הראש וגם את הנשמה. באמת חוויה מפנקת ומהלב. ממליצה בחום🔥🔥🔥", "date": "2025-08-18"}, {"stars": 5, "text": "ממש נהנתי מכל רגע, דיאנה מדהימה ומרגיעה. האווירה היתה נעימה, והעיסוי היה מעולה ומועיל! תודה רבה.", "date": "2026-02-15"}, {"stars": 5, "text": "דיאנה מקסימה ומהממת, נעימה ומסבירת פנים. שירות מדהים. הספא ראש חלומייייי היה תענוג אמיתי, אווירה נעימה ורגועה והכל נעים ריחני ונקי. עיסוי נעים וחומרים נעימים ואיכותיים, ממליצה ממש❤️🫶🏻", "date": "2025-10-17"}, {"stars": 5, "text": "ואוו אין דברים כאלה הדבר הכי טוב שיכולתי לעשות לעצמי אין כיף כזה ! ממליצה בחום", "date": "2026-01-18"}, {"stars": 5, "text": "ידי זהב מושלם מושלם !!!!! ממליצה מאאווד יחס טוב מאוד הכל נקי וסטרילי ימליץ באהבה ויחזור שוב", "date": "2025-11-05"}, {"stars": 5, "text": "דיאנה מהממת ומקצועית. הגעתי עם הבת שלי בת 10 . מאוד נהננו יחס נעים ושירותי. יצאנו ממנה כמו חדשות ממליצה בחום:)", "date": "2025-09-14"}, {"stars": 5, "text": "דיאנה פשוט קסם של אישה ✨ הידיים שלה זה פינוק מהסרטים – ממליצה בחום! מי שצריכה רגע של שלווה – דיאנה היא הכתובת 💆‍♀️ אלופה אמיתית", "date": "2025-06-27"}, {"stars": 5, "text": "היה מאוד נעים ומרגיע, מאוד נהנתי! גם הריחות של החומרים היו ממש טובים זה הוסיף ממש !!", "date": "2025-09-09"}, {"stars": 5, "text": "היינו אני והבת שלי אצל דיאנה עשינו ספא ראש אצלה היה מדהים ביותר,מרגיע,מושלם ברמה נהנינו מאוד בטוחות שנחזור אליה שוב🫶", "date": "2025-11-26"}]</script>
   </section>
 
   <section class="block alt" id="faq">
@@ -367,6 +404,52 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
   if (fab && heroCta && "IntersectionObserver" in window) {
     new IntersectionObserver(function (es) { fab.classList.toggle("show", !es[0].isIntersecting); }).observe(heroCta);
   } else if (fab) { fab.classList.add("show"); }
+
+  /* all reviews: dialog with star filter and date sort */
+  (function () {
+    var dlg = document.getElementById("rvDialog"), list = document.getElementById("rvList"), open = document.getElementById("rvOpen");
+    var data = []; try { data = JSON.parse(document.getElementById("rvData").textContent) || []; } catch (e) {}
+    if (!dlg || !open || !data.length) return;
+    var stars = "all", sort = "new";
+    var MONTHS = ["ינואר","פברואר","מרץ","אפריל","מאי","יוני","יולי","אוגוסט","ספטמבר","אוקטובר","נובמבר","דצמבר"];
+    function when(d) { if (!d) return ""; var p = d.split("-"); return MONTHS[+p[1] - 1] + " " + p[0]; }
+    function render() {
+      var rows = data.filter(function (r) { return stars === "all" || String(r.stars) === stars; });
+      rows.sort(function (a, b) { var x = a.date || "", y = b.date || ""; return sort === "new" ? (x < y ? 1 : x > y ? -1 : 0) : (x > y ? 1 : x < y ? -1 : 0); });
+      list.innerHTML = "";
+      if (!rows.length) { var e = document.createElement("p"); e.className = "rv-empty"; e.textContent = "אין ביקורות בסינון הזה"; list.appendChild(e); return; }
+      rows.forEach(function (r) {
+        var it = document.createElement("article"); it.className = "rv-item";
+        var top = document.createElement("div"); top.className = "top";
+        var st = document.createElement("span"); st.className = "stars"; st.setAttribute("aria-label", r.stars + " כוכבים"); st.textContent = "★".repeat(r.stars);
+        var dt = document.createElement("span"); dt.textContent = when(r.date);
+        top.appendChild(st); top.appendChild(dt);
+        var p = document.createElement("p"); p.textContent = r.text;
+        it.appendChild(top); it.appendChild(p); list.appendChild(it);
+      });
+    }
+    /* one chip per rating that exists (5 down to 1), with how many reviews it has */
+    var holder = document.getElementById("rvStars");
+    [5, 4, 3, 2, 1].forEach(function (n) {
+      var count = data.filter(function (r) { return r.stars === n; }).length;
+      if (!count) return;
+      var c = document.createElement("button"); c.type = "button"; c.className = "chip";
+      c.setAttribute("data-stars", String(n)); c.setAttribute("aria-pressed", "false");
+      c.textContent = n + "★ (" + count + ")";
+      holder.appendChild(c);
+    });
+    dlg.querySelectorAll(".chip").forEach(function (c) {
+      c.addEventListener("click", function () {
+        var key = c.hasAttribute("data-stars") ? "data-stars" : "data-sort";
+        dlg.querySelectorAll("[" + key + "]").forEach(function (o) { o.setAttribute("aria-pressed", o === c ? "true" : "false"); });
+        if (key === "data-stars") stars = c.getAttribute(key); else sort = c.getAttribute(key);
+        render(); list.scrollTop = 0;
+      });
+    });
+    open.addEventListener("click", function () { render(); if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", ""); });
+    document.getElementById("rvClose").addEventListener("click", function () { if (dlg.close) dlg.close(); else dlg.removeAttribute("open"); });
+    dlg.addEventListener("click", function (e) { if (e.target === dlg && dlg.close) dlg.close(); });
+  })();
 
   /* reviews carousel: dots, gentle auto-advance that stops on touch */
   var track = document.getElementById("track"), dots = document.getElementById("dots");

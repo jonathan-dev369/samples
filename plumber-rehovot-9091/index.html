@@ -173,6 +173,29 @@ h2 { font-size: clamp(28px, 3.8vw, 40px); font-weight: 900; margin: 0 0 10px; li
 .dots button { width: 9px; height: 9px; border-radius: 999px; border: 0; padding: 0; background: var(--line); cursor: pointer; transition: width .3s var(--ease), background .3s; }
 .dots button[aria-current=true] { width: 26px; background: var(--accent); }
 
+/* all reviews: button, dialog, filters (added 2026-11-28) */
+.rv-all { display: flex; justify-content: center; margin-top: 18px; }
+.btn-ghost { font: inherit; font-weight: 800; font-size: 16px; color: var(--accent-text); background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); border-radius: 999px; padding: 12px 22px; cursor: pointer; transition: transform .2s var(--ease), box-shadow .2s; }
+.btn-ghost:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
+.rv-dialog { width: min(720px, 94vw); max-height: 88vh; padding: 0; border: 1px solid var(--line); border-radius: var(--r); background: var(--bg); color: var(--ink); box-shadow: var(--shadow-lg); }
+.rv-dialog::backdrop { background: rgba(2,6,23,.55); backdrop-filter: blur(3px); }
+.rv-dialog[open] { display: flex; flex-direction: column; animation: rvpop .28s var(--ease); }
+@keyframes rvpop { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
+.rv-dhead { position: sticky; top: 0; background: var(--bg); padding: 18px 20px 12px; border-bottom: 1px solid var(--line); display: grid; gap: 12px; }
+.rv-dtitle { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.rv-dtitle h3 { margin: 0; font-size: 20px; font-weight: 900; }
+.rv-x { font: inherit; font-size: 22px; line-height: 1; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; }
+.rv-filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.chip { font: inherit; font-size: 14px; font-weight: 700; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--soft); cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.rv-sep { width: 1px; height: 22px; background: var(--line); margin-inline: 4px; }
+.rv-list { overflow-y: auto; padding: 16px 20px 22px; display: grid; gap: 12px; }
+.rv-item { background: var(--card); border: 1px solid var(--line); border-radius: var(--rs); padding: 16px 18px; }
+.rv-item .top { display: flex; justify-content: space-between; gap: 10px; font-size: 14px; color: var(--faint); margin-bottom: 6px; }
+.rv-item p { margin: 0; font-size: 16px; }
+.rv-empty { color: var(--faint); text-align: center; padding: 24px 0; }
+.rev .who .when { margin-inline-start: auto; }
+
 /* faq */
 .faq { max-width: 780px; margin-inline: auto; display: grid; gap: 12px; }
 .faq details { background: var(--card); border: 1px solid var(--line); border-radius: var(--rs); box-shadow: var(--shadow); overflow: hidden; }
@@ -300,9 +323,23 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
         <div><span class="eyebrow rv-in">ביקורות</span><h2 class="rv-in">מה הלקוחות אומרים</h2></div>
         <div class="rv-score rv-in"><b>5</b><div><span class="stars" aria-hidden="true">★★★★★</span><small>73 ביקורות בגוגל</small></div></div>
       </div>
-      <div class="track" id="track" tabindex="0" aria-label="ביקורות, אפשר לגלול לצדדים"><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>ממליצה מאודדד! פתר סתימה כששני אינסטלטורים אחרים לא הצליחו לפתור ושאול באמת נשאר ועבד עד שהסתיימה נפתרה! מומלץ בחום!</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל</figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>בחור צעיר מקצוען הגיע אלינו במוצ&quot;ש וסידר נזילות החליף ברז שבור מחירים סבירים ונוחים ממליץ מאוד</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל</figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>מקצוען אמיתי. שרות יוצא מן הכלל. אמינות ויושר מהירות בביצוע ועבודה טובה.</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל</figcaption></figure></div>
+      <div class="track" id="track" tabindex="0" aria-label="ביקורות, אפשר לגלול לצדדים"><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>אחלה בחור היה זמין לעזור מיידית וגם נתן ייעוץ דרך הטלפון- ניעזר בו בעתיד</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">נובמבר 2026</span></figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>בחור צעיר מקצוען הגיע אלינו במוצ&quot;ש וסידר נזילות החליף ברז שבור מחירים סבירים ונוחים ממליץ מאוד</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">יוני 2026</span></figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>במילה אחת אני יכולה לומר מושלם אבל אני חייבת לרשום עוד נחמד ישר סבלני</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">אוקטובר 2026</span></figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>מקצועי ואדיב מאוד. תקין לנו מה שצריך בזריזות ובמקצועיות. ישר כוח ותודה רבה!</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">יוני 2026</span></figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>מקצוען אמיתי . שרות יוצא מן הכלל. אמינות ויושר מהירות בביצוע ועבודה טובה.</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">מאי 2026</span></figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>ממליצה מאודדד! פתר סתימה כששני אינסטלטורים אחרים לא הצליחו לפתור ושאול באמת נשאר ועבד עד שהסתיימה נפתרה! מומלץ בחום!</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">פברואר 2026</span></figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>אחלה שירות. נשבר לי ברז של המכונת כביסה, שלום הבין את הדחיפות והגיע באותו יום לתקן. גם המחיר היה הוגן. ממליצה בחום</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">פברואר 2026</span></figcaption></figure><figure class="rev"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>פניתי אליו בעקבות תקלה דחופה בצנרת והוא הגיע בזמן נתן שירות מקצועי אדיב ומהיר וזיה את הבעיה בצורה מדויקת. העבודה בוצעה ברמה גבוהה מאוד במחיר הוגן ולא הפתעות אם אתם מחפשים אינסטלטור מקצועי,אמין ומהיר זה האיש</p><figcaption class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>לקוח מגוגל<span class="when">נובמבר 2025</span></figcaption></figure></div>
       <div class="dots" id="dots" aria-hidden="true"></div>
+      <div class="rv-all" ><button type="button" class="btn-ghost" id="rvOpen">לכל 20 הביקורות</button></div>
     </div>
+    <dialog class="rv-dialog" id="rvDialog" aria-labelledby="rvTitle">
+      <div class="rv-dhead">
+        <div class="rv-dtitle"><h3 id="rvTitle">כל הביקורות מגוגל</h3><button type="button" class="rv-x" id="rvClose" aria-label="סגירה">×</button></div>
+        <div class="rv-filters" role="group" aria-label="סינון ומיון">
+          <span id="rvStars" style="display:contents"><button type="button" class="chip" data-stars="all" aria-pressed="true">הכל</button></span>
+          <span class="rv-sep" aria-hidden="true"></span>
+          <button type="button" class="chip" data-sort="new" aria-pressed="true">החדשות קודם</button>
+          <button type="button" class="chip" data-sort="old" aria-pressed="false">הישנות קודם</button>
+        </div>
+      </div>
+      <div class="rv-list" id="rvList" aria-live="polite"></div>
+    </dialog>
+    <script type="application/json" id="rvData">[{"stars": 5, "text": "אחלה בחור היה זמין לעזור מיידית וגם נתן ייעוץ דרך הטלפון- ניעזר בו בעתיד", "date": "2026-11-16"}, {"stars": 5, "text": "בחור צעיר מקצוען הגיע אלינו במוצ\"ש וסידר נזילות החליף ברז שבור מחירים סבירים ונוחים ממליץ מאוד", "date": "2026-06-20"}, {"stars": 5, "text": "במילה אחת אני יכולה לומר מושלם אבל אני חייבת לרשום עוד נחמד ישר סבלני", "date": "2026-10-26"}, {"stars": 5, "text": "מקצועי ואדיב מאוד. תקין לנו מה שצריך בזריזות ובמקצועיות. ישר כוח ותודה רבה!", "date": "2026-06-14"}, {"stars": 5, "text": "מקצוען אמיתי . שרות יוצא מן הכלל. אמינות ויושר מהירות בביצוע ועבודה טובה.", "date": "2026-05-25"}, {"stars": 5, "text": "ממליצה מאודדד! פתר סתימה כששני אינסטלטורים אחרים לא הצליחו לפתור ושאול באמת נשאר ועבד עד שהסתיימה נפתרה! מומלץ בחום!", "date": "2026-02-16"}, {"stars": 5, "text": "אחלה שירות. נשבר לי ברז של המכונת כביסה, שלום הבין את הדחיפות והגיע באותו יום לתקן. גם המחיר היה הוגן. ממליצה בחום", "date": "2026-02-15"}, {"stars": 5, "text": "פניתי אליו בעקבות תקלה דחופה בצנרת והוא הגיע בזמן נתן שירות מקצועי אדיב ומהיר וזיה את הבעיה בצורה מדויקת. העבודה בוצעה ברמה גבוהה מאוד במחיר הוגן ולא הפתעות אם אתם מחפשים אינסטלטור מקצועי,אמין ומהיר זה האיש", "date": "2025-11-27"}, {"stars": 5, "text": "זמינות נהדרת אינסטלטור מומלץ החליף מצוף במונובלוק מהר מאוד", "date": "2026-07-20"}, {"stars": 5, "text": "עבודה טובה מרוצה מאוד תודה רבה ופרנסה בשפע", "date": "2026-06-05"}, {"stars": 5, "text": "ממליץ אדם טוב ומחיר טוב ברחובות והסביבה", "date": "2026-06-24"}, {"stars": 5, "text": "שלום עשה עבודה מצוינת, הסביר בדיוק מה הבעיה והיה שקוף לגבי הכל, לקח מחיר הוגן, ממליץ בחום.", "date": "2025-10-10"}, {"stars": 5, "text": "שירות נהדר מכל בחינה ואיש מקצוע מעולה . מומלץ מאוד", "date": "2021-07-21"}, {"stars": 5, "text": "הגיע מהר, עבודה נקייה, טובה, ובדק הכל בסוף, ממליץ בחום", "date": "2025-11-29"}, {"stars": 5, "text": "בחו מקצועי, עשה עבודה טובה ומהיר ! מחירים סבירים ועבודה נקיה ! ממליצה", "date": "2025-09-17"}, {"stars": 5, "text": "שירות הולם ואדיב עבודה מקצועית בן אדם אחראי ואנושי", "date": "2026-01-28"}, {"stars": 5, "text": "מומלץ בחום!!, סופר מקצועי, שירות אדיב", "date": "2026-05-05"}, {"stars": 5, "text": "בחור אמין, מקצועי בעל ידע רחב בתחום, ממליץ בחום להזמין אותו לפתור תקלות בתחום", "date": "2023-08-30"}, {"stars": 5, "text": "אחלה בחור, הסביר ועזר לי בטלפון. בפעם הבאה כשתהיה בעיה אזמין אותו.", "date": "2024-09-18"}, {"stars": 5, "text": "חיפשתי אינסטלטור בגוגל ומצאתי בן אדם הגון, נעים, מקצועי, בא לקראת הלקוח ובמחיר נח מאוד! ממליצה בחום.שימי כהן", "date": "2020-06-23"}]</script>
   </section>
 
   <section class="block alt" id="faq">
@@ -367,6 +404,52 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
   if (fab && heroCta && "IntersectionObserver" in window) {
     new IntersectionObserver(function (es) { fab.classList.toggle("show", !es[0].isIntersecting); }).observe(heroCta);
   } else if (fab) { fab.classList.add("show"); }
+
+  /* all reviews: dialog with star filter and date sort */
+  (function () {
+    var dlg = document.getElementById("rvDialog"), list = document.getElementById("rvList"), open = document.getElementById("rvOpen");
+    var data = []; try { data = JSON.parse(document.getElementById("rvData").textContent) || []; } catch (e) {}
+    if (!dlg || !open || !data.length) return;
+    var stars = "all", sort = "new";
+    var MONTHS = ["ינואר","פברואר","מרץ","אפריל","מאי","יוני","יולי","אוגוסט","ספטמבר","אוקטובר","נובמבר","דצמבר"];
+    function when(d) { if (!d) return ""; var p = d.split("-"); return MONTHS[+p[1] - 1] + " " + p[0]; }
+    function render() {
+      var rows = data.filter(function (r) { return stars === "all" || String(r.stars) === stars; });
+      rows.sort(function (a, b) { var x = a.date || "", y = b.date || ""; return sort === "new" ? (x < y ? 1 : x > y ? -1 : 0) : (x > y ? 1 : x < y ? -1 : 0); });
+      list.innerHTML = "";
+      if (!rows.length) { var e = document.createElement("p"); e.className = "rv-empty"; e.textContent = "אין ביקורות בסינון הזה"; list.appendChild(e); return; }
+      rows.forEach(function (r) {
+        var it = document.createElement("article"); it.className = "rv-item";
+        var top = document.createElement("div"); top.className = "top";
+        var st = document.createElement("span"); st.className = "stars"; st.setAttribute("aria-label", r.stars + " כוכבים"); st.textContent = "★".repeat(r.stars);
+        var dt = document.createElement("span"); dt.textContent = when(r.date);
+        top.appendChild(st); top.appendChild(dt);
+        var p = document.createElement("p"); p.textContent = r.text;
+        it.appendChild(top); it.appendChild(p); list.appendChild(it);
+      });
+    }
+    /* one chip per rating that exists (5 down to 1), with how many reviews it has */
+    var holder = document.getElementById("rvStars");
+    [5, 4, 3, 2, 1].forEach(function (n) {
+      var count = data.filter(function (r) { return r.stars === n; }).length;
+      if (!count) return;
+      var c = document.createElement("button"); c.type = "button"; c.className = "chip";
+      c.setAttribute("data-stars", String(n)); c.setAttribute("aria-pressed", "false");
+      c.textContent = n + "★ (" + count + ")";
+      holder.appendChild(c);
+    });
+    dlg.querySelectorAll(".chip").forEach(function (c) {
+      c.addEventListener("click", function () {
+        var key = c.hasAttribute("data-stars") ? "data-stars" : "data-sort";
+        dlg.querySelectorAll("[" + key + "]").forEach(function (o) { o.setAttribute("aria-pressed", o === c ? "true" : "false"); });
+        if (key === "data-stars") stars = c.getAttribute(key); else sort = c.getAttribute(key);
+        render(); list.scrollTop = 0;
+      });
+    });
+    open.addEventListener("click", function () { render(); if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", ""); });
+    document.getElementById("rvClose").addEventListener("click", function () { if (dlg.close) dlg.close(); else dlg.removeAttribute("open"); });
+    dlg.addEventListener("click", function (e) { if (e.target === dlg && dlg.close) dlg.close(); });
+  })();
 
   /* reviews carousel: dots, gentle auto-advance that stops on touch */
   var track = document.getElementById("track"), dots = document.getElementById("dots");
